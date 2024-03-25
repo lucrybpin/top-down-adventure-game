@@ -3364,7 +3364,7 @@ Animator:
   m_GameObject: {fileID: 1953270691689057}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: bed7a092d53e7c748bd65db98cebf9d6, type: 3}
-  m_Controller: {fileID: 9100000, guid: 2890c9060ce4f6b45b4082d87f47b27e, type: 2}
+  m_Controller: {fileID: 9100000, guid: e5aa741f6a596474bbd0997ccdee715a, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -3440,7 +3440,10 @@ MonoBehaviour:
     _characterController: {fileID: 0}
     _movementSpeed: 0
     _smoothRotationSpeed: 0
+  _characterAnimation:
+    _animator: {fileID: 0}
   _characterController: {fileID: 136275809896571442}
+  _animator: {fileID: 95805637743075439}
 --- !u!137 &137047875804091983
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 0

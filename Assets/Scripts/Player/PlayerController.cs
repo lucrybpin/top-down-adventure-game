@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 namespace TopDownAdventure.Player
@@ -7,6 +5,7 @@ namespace TopDownAdventure.Player
     public class PlayerController : MonoBehaviour
     {
         private PlayerInputReader _playerInputReader;
+        [SerializeField] private Character _character;
 
         private void Awake()
         {
@@ -16,7 +15,7 @@ namespace TopDownAdventure.Player
         void Update()
         {
             Vector2 movementInput = _playerInputReader.ReadMovement();
-            Debug.Log($"movementInput: {movementInput}");
+            _character.MoveFromInput(movementInput);
         }
 
         private void OnEnable()

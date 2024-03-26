@@ -18,6 +18,11 @@ namespace TopDownAdventure.Player
             return _playerControls.Player.Move.ReadValue<Vector2>();
         }
 
+        public bool LeftClick()
+        {
+            return _playerControls.Player.Attack.triggered;
+        }
+
         public void OnEnable()
         {
             _playerControls.Enable();

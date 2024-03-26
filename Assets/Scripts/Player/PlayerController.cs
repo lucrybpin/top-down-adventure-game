@@ -15,7 +15,9 @@ namespace TopDownAdventure.Player
         void Update()
         {
             Vector2 movementInput = _playerInputReader.ReadMovement();
+            bool leftClick = _playerInputReader.LeftClick();
             _character.MoveFromInput(movementInput);
+            _character.AttackFromInput(leftClick);
         }
 
         private void OnEnable()

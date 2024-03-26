@@ -43,8 +43,8 @@ namespace TopDownAdventure
             inputDirection.Normalize();
 
             // 2 - Rotate the forward vector to align with our rotation angle and this will represent the 3D Vector where our character should move
-            Vector3 movementDirection = Quaternion.Euler(0f, angle, 0f) * Vector3.forward * _movementSpeed;
-            _characterController.Move(movementDirection * deltaTime);
+            Vector3 movementDirection = new Vector3(inputDirection.x, 0f, inputDirection.y) ; // Quaternion.Euler(0f, angle, 0f) * Vector3.forward * _movementSpeed;
+            _characterController.Move(movementDirection * _movementSpeed * deltaTime);
 
         }
 

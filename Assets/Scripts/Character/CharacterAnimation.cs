@@ -22,5 +22,13 @@ namespace TopDownAdventure
             _animator.SetBool("isMoving", isMoving);
         }
 
+        public void UpdateAttackAnimation(bool attackInput)
+        {
+            if (attackInput)
+            {
+                _animator.SetTrigger("Attack");
+            }
+        }
+
     }
 }
